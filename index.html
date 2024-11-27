@@ -1,16 +1,117 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Wild Eats - Groupe 2</title>
+    <title>Wild Star - Groupe 2</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <nav></nav>
-    <main></main>
-    <footer></footer>
-    <h1>Wild Eats</h1>
+    <!--NAVBAR-->
+    <nav>
+      <div class="menu-burger" id="menuBurger">
+        <a id="closeBtn" href="#" class="close">×</a>
+        <ul>
+          <li><a href="#">Qui sommes nous?</a></li>
+          <li><a href="#">Les Wildstars</a></li>
+          <li><a href="#">Evaluer son restaurant</a></li>
+        </ul>
+      </div>
+
+      <a id="openBtn" href="#" class="open">☰</a>
+      <div class="burger-icon">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+
+      <img class="logo" src="WildStar_Logo.png" alt="Lion étoilé" />
+
+      <ul class="lien-nav">
+        <li><a href="#">Se connecter</a></li>
+        <li><a href="#">S'inscrire</a></li>
+      </ul>
+    </nav>
+
+    <!--HEADER-->
+    <header>
+      <h1>Wild Stars</h1>
+      <h2>Mangez comme un sauvage</h2>
+      <!-- <p>
+        Wild Eats révolutionne votre expérience culinaire en répertoriant les
+        meilleurs restaurants de Paris, Lyon, Strasbourg, et Marseille, évalués
+        avec notre système exclusif de Wildstars. Retrouvez une sélection
+        raffinée de tables d’exception, avec des présentations détaillées, des
+        avis clients authentiques, et un accès direct aux menus.
+      </p> -->
+    </header>
+
+    <!--SECTION VILLES-->
+    <section class="villes">
+      <h2>Trouvez les meilleures adresses de France</h2>
+      <div class="ville">
+        <ul>
+          <li><button>Paris</button></li>
+          <li><button>Strasbourg</button></li>
+          <li><button>Marseille</button></li>
+          <li><button>Lyon</button></li>
+        </ul>
+      </div>
+    </section>
+
+    <!--SECTION FILTRE-->
+    <section class="filtre">
+      <h3>Une envie particulière ?</h3>
+      <label for="site-search">Search the site:</label>
+      <input type="search" id="site-search" name="q" />
+
+      <button>Recherche</button>
+    </section>
+
+    <!--SECTION STARS-->
+    <section class="stars"></section>
+    <h3>Les Restaurants stars du moment</h3>
+    <div class="container-stars"></div>
+    <article>
+      <img src="" alt="" />
+      <h4></h4>
+      <p class="WildStar"></p>
+    </article>
+    <article>
+      <img src="" alt="" />
+      <h4></h4>
+      <p class="WildStar"></p>
+    </article>
+    <article>
+      <img src="" alt="" />
+      <h4></h4>
+      <p class="WildStar"></p>
+    </article>
+    <article>
+      <img src="" alt="" />
+      <h4></h4>
+      <p class="WildStar"></p>
+    </article>
+    <article>
+      <img src="" alt="" />
+      <h4></h4>
+      <p class="WildStar"></p>
+    </article>
+    <article>
+      <img src="" alt="" />
+      <h4></h4>
+      <p class="WildStar"></p>
+    </article>
+
+    <!--SECTION LIENS UTILES-->
+    <!-- <section class="liens-utiles">
+    </section> -->
+
+    <!--FOOTER-->
+    <footer>
+      <p class="brand">Wild Stars®</p>
+    </footer>
+
     <script src="script.js"></script>
   </body>
 </html>
