@@ -1,24 +1,27 @@
 const restaurants = [
-  { name: "Choucroutage", specialty: "Choucroute" },
-  { name: "Choucrouterie", specialty: "Choucroute" },
-  { name: "Choucroumax", specialty: "Choucroute" },
-  { name: "Chouc' Route", specialty: "Choucroute" },
-  { name: "Choucrouroute", specialty: "Choucroute" },
-];
+  {
+      "name": "Choucrouterie",
+      "location": "Paris",
+      "Vegan": "non",
+      "wildstar": "5"
+  },
+  {
+    "name": "Le Loreum",
+    "location": "Lyon",
+    "Vegan": "oui",
+    "wildstar": "4"
+},
+{
+  "name": "Pixelite",
+  "location": "Marseille",
+  "Vegan": "non",
+  "wildstar": "3"
+},
+{
+  "name": "Grid a Volonté",
+  "location": "Strasbourg",
+  "Vegan": "non",
+  "wildstar": "2"
+},
+]
 
-/MENU BURGER/;
-
-var menuBurger = document.getElementById("menuBurger");
-var openBtn = document.getElementById("openBtn");
-var closeBtn = document.getElementById("closeBtn");
-
-openBtn.onclick = openMenu;
-closeBtn.onclick = closeMenu;
-
-function openMenu() {
-  menuBurger.classList.add("active");
-}
-
-function closeMenu() {
-  menuBurger.classList.remove("active");
-}
