@@ -1,5 +1,6 @@
 const restaurants = [
   {
+<<<<<<< HEAD
     name: "Choucrouterie",
     location: "Paris",
     Vegan: true,
@@ -46,3 +47,30 @@ const restauStar = restaurants.filter((restaurant) => restaurant.wildstar > 3);
 
 const cards = document.querySelector(".container-stars");
 cards.innerHTML = "";
+=======
+      "name": "Choucrouterie",
+      "location": "Paris",
+      "Vegan": "non",
+      "wildstar": "5"
+  },
+  {
+    "name": "Le Loreum",
+    "location": "Lyon",
+    "Vegan": "oui",
+    "wildstar": "4"
+},
+{
+  "name": "Pixelite",
+  "location": "Marseille",
+  "Vegan": "non",
+  "wildstar": "3"
+},
+{
+  "name": "Grid a Volonté",
+  "location": "Strasbourg",
+  "Vegan": "non",
+  "wildstar": "2"
+},
+]
+
+>>>>>>> b296178e688f664bdb4b03cc09a3b925c78e4451
