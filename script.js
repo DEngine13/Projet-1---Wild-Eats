@@ -47,3 +47,13 @@ const restauStar = restaurants.filter((restaurant) => restaurant.wildstar > 3);
 const cards = document.querySelector(".container-stars");
 cards.innerHTML = "";
 
+const hamMenu = document.querySelector('.burger-menu');
+
+const offScreenMenu = document.querySelector('.off-screen-menu');
+
+hamMenu.addEventListener ('click', () => {
+  hamMenu.classList.toggle('active');
+  offScreenMenu.classList.toggle('active');
+})
+
+
