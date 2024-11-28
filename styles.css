@@ -55,7 +55,6 @@ body {
 
 .off-screen-menu > ul > li{
   padding: 0.5rem;
-  
 }
 
 .off-screen-menu ul > li > a {
@@ -97,6 +96,7 @@ nav {
 }
 
 
+
 .burger.menu, span {
   
   height: 5px;
@@ -108,6 +108,7 @@ nav {
   position: absolute;
   transform: translate(-50%, -50%);
   transition: .5s ease;
+  cursor: pointer;
 }
 
 .burger.menu, span:nth-child(1) {
@@ -320,6 +321,7 @@ p {
   transition: all 0.3s;
   cursor: pointer;
   padding: 0.6rem;
+  margin-top: 2rem;
 }
 
 .card:hover {
@@ -331,10 +333,10 @@ p {
 .card-image-container {
   width: 100%;
   height: 45%;
+  object-fit: cover;
   border-radius: 10px;
   margin-bottom: 0.5rem;
-  overflow: hidden;
-  background-color: rgb(165, 165, 165);
+  /* overflow: hidden; */
 }
 
 .card-title {
@@ -346,6 +348,7 @@ p {
   display: -webkit-box;
   -webkit-line-clamp: 1;
   line-clamp: 1;
+  text-align: left;
 }
 
 .card-des {
