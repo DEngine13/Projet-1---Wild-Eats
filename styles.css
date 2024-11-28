@@ -10,7 +10,7 @@
 }
 
 * {
-  margin: 0;
+  margin: 0rem;
   padding: 0;
   box-sizing: border-box;
   /* border: 1px solid red; */
@@ -39,6 +39,10 @@ nav {
   justify-content: space-between;
   align-items: start;
   padding: 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
 .lien-nav {
@@ -118,14 +122,15 @@ header {
 }
 
 header > h1 {
-  font-size: 4rem;
+  font-size: 4.2rem;
   color: var(--main-color);
   font-family: "Josefin sans", sans-serif;
   text-shadow: 1px 1px 2px var(--second-color);
+  margin-top: 8rem;
 }
 
 header > h2 {
-  font-size: 1rem;
+  font-size: 1.5rem;
   color: var(--second-color);
   font-family: "Josefin sans", sans-serif;
   margin-top: 0.2rem;
@@ -143,6 +148,8 @@ header > p {
 .villes {
   background-color: var(--third-color);
   padding: 1rem;
+  margin: 1.5rem;
+  border-radius: 20px;
 }
 
 .villes > ul {
@@ -155,11 +162,11 @@ header > p {
 }
 
 .btncities {
-  height: 10rem;
-  width: 10rem;
+  height: 7rem;
+  width: 7rem;
   border-radius: 17px;
   background-image: url("tour-eiffel.jpg");
-  background-size: 10rem;
+  background-size: 7rem;
   color: var(--fourth-color);
   font-size: 1.5rem;
   text-shadow: 1px 1px 2px var(--second-color);
