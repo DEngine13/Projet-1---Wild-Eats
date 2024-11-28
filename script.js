@@ -1,24 +1,48 @@
 const restaurants = [
-  { name: "Choucroutage", specialty: "Choucroute" },
-  { name: "Choucrouterie", specialty: "Choucroute" },
-  { name: "Choucroumax", specialty: "Choucroute" },
-  { name: "Chouc' Route", specialty: "Choucroute" },
-  { name: "Choucrouroute", specialty: "Choucroute" },
+  {
+    name: "Choucrouterie",
+    location: "Paris",
+    Vegan: true,
+    wildstar: "5",
+    Picture: "",
+  },
+  {
+    name: "Le Loreum",
+    location: "Lyon",
+    Vegan: "oui",
+    wildstar: "4",
+    Picture: "",
+  },
+  {
+    name: "Pixelite",
+    location: "Marseille",
+    Vegan: "non",
+    wildstar: "4",
+    Picture: "",
+  },
+  {
+    name: "Grid a Volonté",
+    location: "Strasbourg",
+    Vegan: "non",
+    wildstar: "2",
+    Picture: "",
+  },
 ];
 
-/MENU BURGER/;
+// GENERATION CARD AU LANCEMENT DE LA PAGE
 
-var menuBurger = document.getElementById("menuBurger");
-var openBtn = document.getElementById("openBtn");
-var closeBtn = document.getElementById("closeBtn");
-
-openBtn.onclick = openMenu;
-closeBtn.onclick = closeMenu;
-
-function openMenu() {
-  menuBurger.classList.add("active");
+{
+  /* <div class="card">
+          <div class="card-image-container"></div>
+          <h3 class="card-title">Card Title</h3>
+          <p class="card-des">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam
+            inventore natus modi
+          </p>
+        </div> */
 }
 
-function closeMenu() {
-  menuBurger.classList.remove("active");
-}
+const restauStar = restaurants.filter((restaurant) => restaurant.wildstar > 3);
+
+const cards = document.querySelector(".container-stars");
+cards.innerHTML = "";
