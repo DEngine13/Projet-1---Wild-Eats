@@ -281,25 +281,32 @@ p {
   color: var(--second-color);
 }
 
+/* FILTRE */
+
+.search-input {
+  width: 35%;
+}
+
 /* CARDS */
 
 .container-stars {
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   justify-content: center;
   gap: 1rem;
+  overflow-x: scroll;
+  width: 90%;
 }
 
 .card {
   display: flex;
   flex-direction: column;
-  width: 10rem;
+  min-width: 16rem;
   height: 13rem;
   background-color: var(--fourth-color);
   border-radius: 10px;
   box-shadow: 0px 10px 12px rgba(0, 0, 0, 0.08),
     -4px -4px 12px rgba(0, 0, 0, 0.08);
-  overflow: hidden;
   transition: all 0.3s;
   cursor: pointer;
   padding: 0.6rem;

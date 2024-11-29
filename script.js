@@ -3,10 +3,10 @@ const restaurants = [
     name: "La Jacobine",
     location: "Paris",
     Vegan: "non",
-    wildstar: "5",
+    wildstar: 5,
     Picture: "la-jacobine-PARIS.jpg",
     Description:
-      "Bienvenue à La Jacobine, un lieu où la tradition culinaire française rencontre la passion et l’authenticité. Situé au cœur du quartier historique de Saint-Germain-des-Prés à Paris, ce restaurant incarne l’esprit d’une époque révolue tout en offrant une expérience gastronomique moderne et raffinée.",
+      "Bienvenue à La Jacobine, un lieu où la tradition culinaire française rencontre la passion et l’authenticité.",
     GPS: [48.853473644057445, 2.3392363338910585],
   },
   {
@@ -16,7 +16,7 @@ const restaurants = [
     wildstar: "4",
     Picture: "melt-PARIS.jpg",
     Description:
-      "Chez Melt nous reprenons les valeurs culinaires du Texas en fumant toutes nos viandes au feu de bois de chêne, à basse température pendant de longues heures. Notre barbecue est généreux, chaleureux mais surtout familial et croyez-nous, vous ne risquez pas de l’oublier !",
+      "Chez Melt nous reprenons les valeurs culinaires du Texas en fumant toutes nos viandes au feu de bois de chêne.",
       GSP: [48.865808415837115, 2.3715107031938003]
   },
   {
@@ -26,7 +26,7 @@ const restaurants = [
     wildstar: "4",
     Picture: "aujourdhuidemain-PARIS.jpg",
     Description:
-      "Le concept de ce lieu est avant tout de rassembler en un seul et même endroit les meilleurs produits vegan. Que ce soit dans votre assiette au restaurant, ou bien directement à acheter dans leur boutique, Aujourd’hui Demain vous garantit de belles découvertes culinaires. Et ce n’est pas tout, car le concept-store organise également différents types d’événements comme des projections ou des dégustations pour tous les gourmands.",
+      "Le concept de ce lieu est avant tout de rassembler en un seul et même endroit les meilleurs produits vegan.",
     GPS: [48.85900070993327, 2.375116081780484],
   },
   {
@@ -36,7 +36,7 @@ const restaurants = [
     wildstar: "5",
     Picture: "lestontonsveg-PARIS.jpg",
     Description:
-      "On peut être végan sans crier que le tofu c’est le turfu. La preuve avec Amir Taleb et Vincent Peroux de Tontons Veg et leurs burgers veggie qui font flageoler les certitudes d’un viandard. Car ici, les hachés rouge sang que retourne lestement Vincent n’ont pas été découpés au cul d’un angus mais proviennent de chez Beyond Meat, la Rolls du simili-steak.",
+      "On peut être végan sans crier que le tofu c’est le turfu.",
     GPS: [48.87477488723339, 2.355429119886937]
   },
   {
@@ -46,7 +46,7 @@ const restaurants = [
     wildstar: "4",
     Picture: "elietraiteur-PARIS.jpg",
     Description:
-      "Elie Traiteur, un petit restaurant cosy dans une rue agréable, séduit par sa cuisine libanaise généreuse et savoureuse. Les mezzes et plats variés, préparés avec des produits frais, sont un vrai régal. Le rapport qualité-prix est excellent.",
+      "Elie Traiteur, un petit restaurant cosy dans une rue agréable, séduit par sa cuisine libanaise généreuse et savoureuse.",
     GPS: [48.87489257407411, 2.343186566436156]
   },
   {
@@ -57,7 +57,7 @@ const restaurants = [
     Picture: "leschauvins-STRASBOURG.jpg",
     Description:
 
-      "Niché au cœur du quartier historique de Strasbourg, près de la Cathédrale Notre Dame, le Restaurant Les Chauvins, Père & Fils vous accueille dans un cadre moderne et chaleureux pour une découverte originale des saveurs d’Alsace. Eveillez vos papilles et vos sens en savourant de délicieux tapas alsaciennes, élaborés par notre chef.",
+      "Niché au cœur du quartier historique de Strasbourg, près de la Cathédrale Notre Dame.",
     GPS: [48.583730386186744, 7.753328884654923]
   }, {
     name: "Kohola Strasbourg",
@@ -66,7 +66,7 @@ const restaurants = [
     wildstar: "4",
     Picture: "kohola-STRASBOURG.jpg",
     Description:
-      "Plongez dans l’univers de Koholã avec nos 4 restaurants et venez découvrir notre cuisine d'inspiration hawaïenne avec le poke bowl, un plat traditionnel qui se compose de poisson cru très frais coupé en dés, de fruits et légumes fraîchement cuisinés, le tout servi sur une base de riz, de quinoa ou de salade! ",
+      "Plongez dans l’univers de Koholã avec nos 4 restaurants et venez découvrir notre cuisine d'inspiration hawaïenne avec le poke bowl.",
     GPS: [48.578576911487836, 7.753118633877819]
   }, {
     name: "Au Brasseur",
