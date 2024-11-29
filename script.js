@@ -38,6 +38,26 @@ const restaurants = [
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam",
       GPS: [48.582474, 7.752762]
   },
+  {
+    name: "La Brigade Du Tigre",
+    location: "Paris",
+    Vegan: "non",
+    wildstar: "5",
+    Picture: "https://lh3.googleusercontent.com/p/AF1QipMrXOuD_lAm75PP6k656m0RM1Sg9B2GZUkgGegf=s680-w680-h510",
+    Description:
+      "Une précision des goûts récompensé par Michelin comme jeune talent très prometteur",
+      GPS: [48.873544332552235, 2.3479134829341763]
+  },
+  {
+  name: "L'Ardoise",
+    location: "Paris",
+    Vegan: "non",
+    wildstar: "5",
+    Picture: "https://lardoise-arpajon.fr/wp-content/uploads/2024/06/foie-gras-du-chef-gelee-de-champagne-framboise-brioche.png",
+    Description:
+      "Vous aurez toujours des produits frais et savoureux dans votre assiette. Ceci est notre promesse.",
+      GPS: [48.592111887538316, 2.247526124251261]
+  }
 ];
 
 // GENERATION CARD AU LANCEMENT DE LA PAGE
@@ -92,6 +112,7 @@ function createCard(restaus) {
           <strong>Location:</strong> ${restau.location}<br>
           <strong>Vegan:</strong> ${restau.Vegan ? "Yes" : "No"}<br> ${restau.wildstar}⭐
         `;
+
         const [lat, lon] = restau.GPS;
         map.setView([lat, lon, 13]);
         marker.setLatLng([lat, lon]);
