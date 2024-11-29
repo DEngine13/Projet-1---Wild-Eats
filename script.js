@@ -62,20 +62,33 @@ const restaurants = [
   },
 ];
 
-// GENERATION CARD AU LANCEMENT DE LA PAGE
+const sectionCardsTitle = document.querySelector('.sectionCardsTitle');
 const restauStar = restaurants.filter((restaurant) => restaurant.wildstar >= 4);
-// const locationparis = restaurants.filter((restaurant) => restaurant.location === "Paris")
 const btncities = document.querySelectorAll('.btncities')
 
 btncities.forEach((btn) => {
   btn.addEventListener('click', function () {
     // 'this' fait référence au bouton cliqué
     const locationRestau = restaurants.filter((restaurant) => restaurant.location == this.innerText);
+    sectionCardsTitle.innerHTML =`Les Restaurants a ${this.innerText}`
     createCard(locationRestau);   // Crée une carte pour la ville
   });
 });
 
+function updateCards() {
 
+  let filteredrestaurants = restaurants;
+
+  if (searchInput.value) {
+    filteredrestaurants = filteredrestaurants.filter((restaurant) =>
+      restaurant.name.toLowerCase().includes(searchInput.value.toLowerCase())
+    );
+  }
+createCard(filteredrestaurants)
+}
+
+const searchInput = document.querySelector(".search-input");
+searchInput.addEventListener("input", () => updateCards());
 
 
 function createCard(restaus) {
@@ -120,6 +133,9 @@ function createCard(restaus) {
         card.classList.remove("expanded");
         rank.innerHTML = `${restau.wildstar}⭐`;
       } else {
+        document.querySelectorAll(".card.expanded").forEach((expandedCard) => {
+          expandedCard.classList.remove("expanded");
+        });
         card.classList.add("expanded");
         rank.innerHTML = "";
         cardDes.innerHTML = `
@@ -133,7 +149,7 @@ function createCard(restaus) {
         const [lat, lon] = restau.GPS;
         map.setView([lat, lon, 13]);
         marker.setLatLng([lat, lon]);
-        marker.bindPopup(`${restau.name}<br>${restau.location}`);
+        marker.bindPopup(`<strong>${restau.name}</strong><br>${restau.location}`);
       }
     });
     cards.appendChild(card);
