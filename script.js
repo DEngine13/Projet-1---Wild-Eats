@@ -56,6 +56,7 @@ const restaurants = [
     wildstar: "5",
     Picture: "leschauvins-STRASBOURG.jpg",
     Description:
+
       "Niché au cœur du quartier historique de Strasbourg, près de la Cathédrale Notre Dame, le Restaurant Les Chauvins, Père & Fils vous accueille dans un cadre moderne et chaleureux pour une découverte originale des saveurs d’Alsace. Eveillez vos papilles et vos sens en savourant de délicieux tapas alsaciennes, élaborés par notre chef.",
     GPS: [48.583730386186744, 7.753328884654923]
   }, {
@@ -194,11 +195,61 @@ const restaurants = [
     Description:
       "Le Bistrot d’Abel est le petit frère du Café Comptoir ABEL, à la voute d’Ainay, plus vieux restaurant de Lyon et garant de la tradition des Mères Lyonnaise. Ici, tout est à l’unisson, comme installé depuis des siècles. Une gastronomie bonhomme, mais goûteuse et généreuse, redonne aux palais l’appétence d’une nourriture d’antan. La capitale de la gastronomie trouve ici une nouvelle ambassade du bien manger et du bien recevoir, un nouveau lieu de mœurs culinaires confites dans la tradition ancestrale.",
     GPS: [45.764193047388254, 4.836881252815976]
+
+  },
+  {
+    name: "La Brigade Du Tigre",
+    location: "Paris",
+    Vegan: "non",
+    wildstar: "5",
+    Picture:
+      "https://lh3.googleusercontent.com/p/AF1QipMrXOuD_lAm75PP6k656m0RM1Sg9B2GZUkgGegf=s680-w680-h510",
+    Description:
+      "Une précision des goûts récompensé par Michelin comme jeune talent très prometteur",
+    GPS: [48.873544332552235, 2.3479134829341763],
+  },
+  {
+    name: "L'Ardoise",
+    location: "Paris",
+    Vegan: "non",
+    wildstar: "5",
+    Picture:
+      "https://lardoise-arpajon.fr/wp-content/uploads/2024/06/foie-gras-du-chef-gelee-de-champagne-framboise-brioche.png",
+    Description:
+      "Vous aurez toujours des produits frais et savoureux dans votre assiette. Ceci est notre promesse.",
+    GPS: [48.592111887538316, 2.247526124251261],
+
   },
 ];
 
-// GENERATION CARD AU LANCEMENT DE LA PAGE
+const sectionCardsTitle = document.querySelector('.sectionCardsTitle');
 const restauStar = restaurants.filter((restaurant) => restaurant.wildstar >= 4);
+const btncities = document.querySelectorAll('.btncities')
+
+btncities.forEach((btn) => {
+  btn.addEventListener('click', function () {
+    // 'this' fait référence au bouton cliqué
+    const locationRestau = restaurants.filter((restaurant) => restaurant.location == this.innerText);
+    sectionCardsTitle.innerHTML =`Les Restaurants a ${this.innerText}`
+    createCard(locationRestau);   // Crée une carte pour la ville
+  });
+});
+
+function updateCards() {
+
+  let filteredrestaurants = restaurants;
+
+  if (searchInput.value) {
+    filteredrestaurants = filteredrestaurants.filter((restaurant) =>
+      restaurant.name.toLowerCase().includes(searchInput.value.toLowerCase())
+    );
+  }
+createCard(filteredrestaurants)
+}
+
+const searchInput = document.querySelector(".search-input");
+searchInput.addEventListener("input", () => updateCards());
+
 
 function createCard(restaus) {
   const cards = document.querySelector(".container-stars");
@@ -242,17 +293,25 @@ function createCard(restaus) {
         card.classList.remove("expanded");
         rank.innerHTML = `${restau.wildstar}⭐`;
       } else {
+        document.querySelectorAll(".card.expanded").forEach((expandedCard) => {
+          expandedCard.classList.remove("expanded");
+        });
         card.classList.add("expanded");
+
         rank.innerHTML = ""
+
         cardDes.innerHTML = `
           ${restau.Description}<br>
           <strong>Location:</strong> ${restau.location}<br>
-          <strong>Vegan:</strong> ${restau.Vegan ? "Yes" : "No"}<br> ${restau.wildstar}⭐
+          <strong>Vegan:</strong> ${restau.Vegan ? "Yes" : "No"}<br> ${
+          restau.wildstar
+        }⭐
         `;
+
         const [lat, lon] = restau.GPS;
         map.setView([lat, lon, 13]);
         marker.setLatLng([lat, lon]);
-        marker.bindPopup(`${restau.name}<br>${restau.location}`);
+        marker.bindPopup(`<strong>${restau.name}</strong><br>${restau.location}`);
       }
     });
     cards.appendChild(card);

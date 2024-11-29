@@ -304,13 +304,16 @@ p {
   cursor: pointer;
   padding: 0.6rem;
   margin-top: 2rem;
-  transition: all 0.4s ease;
+  transition: all 0.6s ease;
 }
 
 .card.expanded {
-  width: 16rem; /* Largeur agrandie */
+  width: 13rem; /* Largeur agrandie */
   height: 19rem; /* Hauteur agrandie */
   padding: 1rem; /* Plus de padding pour le contenu */
+  position: absolute;
+  background-color: var(--main-color);
+  border: 1px solid var(--second-color);
 }
 
 .card.expanded .card-des {
@@ -364,7 +367,7 @@ p {
   height: 300px;
   width: 350px;
   border-radius: 30px;
-  margin-top: 3rem;
+  margin-top: 6rem;
  }
 
 /* FOOTER */
