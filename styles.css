@@ -32,6 +32,11 @@ body {
   background-color: var(--fourth-color);
 }
 
+p {
+  font-family: "Cabin", sans-serif;
+  color: var(--second-color);
+}
+
 /* NAVBAR */
 
 .off-screen-menu {
@@ -78,7 +83,7 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 3;
 }
 
 .burger.menu {
@@ -267,6 +272,11 @@ header > p {
   margin: 0.5rem;
 }
 
+.search-input {
+  width: 35%;
+}
+
+/* CARDS */
 .stars {
   display: flex;
   flex-direction: column;
@@ -275,20 +285,6 @@ header > p {
   padding: 0.5rem;
 }
 
-p {
-  font-family: "Cabin, sans-serif";
-  font-size: 0.8rem;
-  color: var(--second-color);
-}
-
-/* FILTRE */
-
-.search-input {
-  width: 35%;
-}
-
-/* CARDS */
-
 .container-stars {
   display: flex;
   /* flex-wrap: wrap; */
@@ -296,6 +292,11 @@ p {
   gap: 1rem;
   overflow-x: scroll;
   width: 90%;
+}
+
+.sectionCardsTitle {
+  font-size: 2.5rem;
+  padding: 1rem;
 }
 
 .card {
@@ -311,7 +312,8 @@ p {
   cursor: pointer;
   padding: 0.6rem;
   margin-top: 2rem;
-  transition: all 0.6s ease;
+  transition: all 0.4 ease;
+  overflow: hidden;
 }
 
 .card.expanded {
@@ -321,6 +323,7 @@ p {
   position: absolute;
   background-color: var(--main-color);
   border: 1px solid var(--second-color);
+  z-index: 2;
 }
 
 .card.expanded .card-des {
@@ -371,26 +374,25 @@ p {
 }
 
 #map {
-  height: 300px;
-  width: 350px;
+  height: 320px;
+  min-width: 95%;
   border-radius: 30px;
-  margin-top: 6rem;
- }
+  margin-top: 5.5rem;
+}
 
 /* FOOTER */
 footer {
   display: flex;
+  flex-direction: row;
   justify-items: center;
   align-items: center;
   background-color: var(--second-color);
-  height: 5rem;
-  margin-top: 20rem;
+  height: 2rem;
 }
 
 .brand {
   color: var(--main-color);
   font-size: 0.8rem;
-  text-align: center;
 }
 
 @media screen and (min-width = 992px) {
