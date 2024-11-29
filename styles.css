@@ -292,7 +292,7 @@ p {
 .container-stars {
   display: flex;
   /* flex-wrap: wrap; */
-  justify-content: center;
+  /* justify-content: center; */
   gap: 1rem;
   overflow-x: scroll;
   width: 90%;
