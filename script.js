@@ -36,12 +36,15 @@ const restaurants = [
     Picture: "Lyon-basilica-2382830_1280.jpg",
     Description:
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam",
-      GPS: [48.582474, 7.752762]
+    GPS: [48.582474, 7.752762]
   },
 ];
 
 // GENERATION CARD AU LANCEMENT DE LA PAGE
 const restauStar = restaurants.filter((restaurant) => restaurant.wildstar >= 4);
+const locationfiltre = restaurants.filter((restaurant) => restaurant.location === "Paris")
+console.log(locationfiltre)
+
 
 function createCard(restaus) {
   const cards = document.querySelector(".container-stars");
@@ -76,7 +79,7 @@ function createCard(restaus) {
     card.appendChild(cardDes);
 
     const rank = document.createElement("p");
-    rank.innerHTML = `${restau.wildstar}⭐`; 
+    rank.innerHTML = `${restau.wildstar}⭐`;
     rank.style.fontSize = "1.5rem";
     card.appendChild(rank);
 
@@ -86,7 +89,7 @@ function createCard(restaus) {
         rank.innerHTML = `${restau.wildstar}⭐`;
       } else {
         card.classList.add("expanded");
-        rank.innerHTML =""
+        rank.innerHTML = ""
         cardDes.innerHTML = `
           ${restau.Description}<br>
           <strong>Location:</strong> ${restau.location}<br>
