@@ -1,42 +1,199 @@
 const restaurants = [
   {
-    name: "Choucrouterie",
+    name: "La Jacobine",
     location: "Paris",
-    Vegan: true,
+    Vegan: "non",
     wildstar: "5",
-    Picture: "Strasbourgchurch-625211_1280.jpg",
+    Picture: "la-jacobine-PARIS.jpg",
     Description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam",
-    GPS: "",
+      "Bienvenue à La Jacobine, un lieu où la tradition culinaire française rencontre la passion et l’authenticité. Situé au cœur du quartier historique de Saint-Germain-des-Prés à Paris, ce restaurant incarne l’esprit d’une époque révolue tout en offrant une expérience gastronomique moderne et raffinée.",
+    GPS: [48.853473644057445, 2.3392363338910585],
   },
   {
-    name: "Le Loreum",
-    location: "Lyon",
-    Vegan: "oui",
-    wildstar: "4",
-    Picture: "paris-4563750_1280.jpg",
-    Description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam",
-  },
-  {
-    name: "Pixelite",
-    location: "Marseille",
+    name: "Melt",
+    location: "Paris",
     Vegan: "non",
     wildstar: "4",
-    Picture: "marseille-7352728_1280.jpg",
+    Picture: "melt-PARIS.jpg",
     Description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam",
-    GPS: [43.270409, 5.392682],
+      "Chez Melt nous reprenons les valeurs culinaires du Texas en fumant toutes nos viandes au feu de bois de chêne, à basse température pendant de longues heures. Notre barbecue est généreux, chaleureux mais surtout familial et croyez-nous, vous ne risquez pas de l’oublier !",
+      GSP: [48.865808415837115, 2.3715107031938003]
   },
   {
-    name: "Grid a Volonté",
+    name: "Aujourd'hui Demain",
+    location: "Paris",
+    Vegan: "oui",
+    wildstar: "4",
+    Picture: "aujourdhuidemain-PARIS.jpg",
+    Description:
+      "Le concept de ce lieu est avant tout de rassembler en un seul et même endroit les meilleurs produits vegan. Que ce soit dans votre assiette au restaurant, ou bien directement à acheter dans leur boutique, Aujourd’hui Demain vous garantit de belles découvertes culinaires. Et ce n’est pas tout, car le concept-store organise également différents types d’événements comme des projections ou des dégustations pour tous les gourmands.",
+    GPS: [48.85900070993327, 2.375116081780484],
+  },
+  {
+    name: "Les Tontons Veg",
+    location: "Paris",
+    Vegan: "oui",
+    wildstar: "5",
+    Picture: "lestontonsveg-PARIS.jpg",
+    Description:
+      "On peut être végan sans crier que le tofu c’est le turfu. La preuve avec Amir Taleb et Vincent Peroux de Tontons Veg et leurs burgers veggie qui font flageoler les certitudes d’un viandard. Car ici, les hachés rouge sang que retourne lestement Vincent n’ont pas été découpés au cul d’un angus mais proviennent de chez Beyond Meat, la Rolls du simili-steak.",
+    GPS: [48.87477488723339, 2.355429119886937]
+  },
+  {
+    name: "Elie Traiteur",
+    location: "Paris",
+    Vegan: "oui",
+    wildstar: "4",
+    Picture: "elietraiteur-PARIS.jpg",
+    Description:
+      "Elie Traiteur, un petit restaurant cosy dans une rue agréable, séduit par sa cuisine libanaise généreuse et savoureuse. Les mezzes et plats variés, préparés avec des produits frais, sont un vrai régal. Le rapport qualité-prix est excellent.",
+    GPS: [48.87489257407411, 2.343186566436156]
+  },
+  {
+    name: "Les Chauvins Père & Fils",
     location: "Strasbourg",
     Vegan: "non",
     wildstar: "5",
-    Picture: "Lyon-basilica-2382830_1280.jpg",
+    Picture: "leschauvins-STRASBOURG.jpg",
     Description:
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam",
-      GPS: [48.582474, 7.752762]
+      "Niché au cœur du quartier historique de Strasbourg, près de la Cathédrale Notre Dame, le Restaurant Les Chauvins, Père & Fils vous accueille dans un cadre moderne et chaleureux pour une découverte originale des saveurs d’Alsace. Eveillez vos papilles et vos sens en savourant de délicieux tapas alsaciennes, élaborés par notre chef.",
+    GPS: [48.583730386186744, 7.753328884654923]
+  }, {
+    name: "Kohola Strasbourg",
+    location: "Strasbourg",
+    Vegan: "OUI",
+    wildstar: "4",
+    Picture: "kohola-STRASBOURG.jpg",
+    Description:
+      "Plongez dans l’univers de Koholã avec nos 4 restaurants et venez découvrir notre cuisine d'inspiration hawaïenne avec le poke bowl, un plat traditionnel qui se compose de poisson cru très frais coupé en dés, de fruits et légumes fraîchement cuisinés, le tout servi sur une base de riz, de quinoa ou de salade! ",
+    GPS: [48.578576911487836, 7.753118633877819]
+  }, {
+    name: "Au Brasseur",
+    location: "Strasbourg",
+    Vegan: "oui",
+    wildstar: "4",
+    Picture: "aubrasseur-STRASBOURG.jpg",
+    Description:
+      "Le Brasseur, situé à Strasbourg, est une brasserie où les plats délicieux sont accompagnés d'une ambiance charmante. La carte variée propose des salades, des spécialités alsaciennes, des plats de brasserie, des viandes, des welsh, des flammekueche salées et sucrées, des desserts, des glaces et des assiettes de fromages. Des incontournables comme la flammekueche pomme flambée fleur de bière et la glace délice du Brasseur sauront vous séduire. N'hésitez pas à venir découvrir ce lieu où la gastronomie rencontre la convivialité.",
+    GPS: [48.58296036224063, 7.756412216165095]
+  }, {
+    name: "La Fignette",
+    location: "Strasbourg",
+    Vegan: "oui",
+    wildstar: "5",
+    Picture: "LaFignette-STRASBOURG.jpg",
+    Description:
+      "La Fignette, c’est comme une bonne tarte flambée, du feu de bois, des ingrédients locaux et frais, un groupe d’amis autours de la table, des recettes variées et colorées et une occasion à tout moment pour se faire plaisir. La Fignette, c’est un bistrot de quartier, ouvert toute la journée et sur le monde où le voyageur sera toujours accueilli avec la joie du partage et l’habitué comme un ami. La Fignette, c’est un bout d’Alsace forte de sa diversité, de ses valeurs et de sa facilité à parler plusieurs langues. Elle défend ses saveurs et n’a pas peur de les mélanger aux plaisirs d’ailleurs. ",
+    GPS: [48.58257476098657, 7.743042180433159]
+  }, {
+    name: "Coco Lobo",
+    location: "Strasbourg",
+    Vegan: "oui",
+    wildstar: "4",
+    Picture: "COCOLOBO-STRASBOURG.jpg",
+    Description:
+      "Un Restaurant Tapas mais aussi un Bar de Nuit original et agréable au coeur du quartier de la Petite-France à Strasbourg. Faire la fête sur des rythmes latinos est le maître mot ici, tout en goûtant aux cocktails et aux spécialités culinaires espagnoles !",
+    GPS: [48.579234228037535, 7.739355368789756]
+  },
+  {
+    name: "Le Hippie Chic Café",
+    location: "Marseille",
+    Vegan: "oui",
+    wildstar: "4",
+    Picture: "lehippiechiccafe-MARSEILLE.jpg",
+    Description:
+      "Situé dans le quartier dynamique de la Joliette à Marseille, à deux pas du Panier, notre restaurant offre une expérience culinaire unique. En combinant des ingrédients locaux et notre savoir-faire, nous proposons à nos clients des plats originaux faits maison.",
+    GPS: [43.30439711550707, 5.36575276432541]
+  },
+  {
+    name: "Le Fantastique",
+    location: "Marseille",
+    Vegan: "oui",
+    wildstar: "5",
+    Picture: "lefantastique-MARSEILLE.jpg",
+    Description:
+      "Un restaurant chaleureux et accueillant. Le décor est magique, et la cuisine, faite avec amour, est exquise. Une belle terrasse arrière, un cadre charmant avec une ambiance chaleureuse et des tapas de qualité. Les mets faits maison sont frais, savoureux et goûteux, même s'il y a parfois de l'attente. Un endroit à ne pas manquer pour passer une excellente soirée à Marseille, avec un très bon rapport qualité-prix. Un vrai bijou à découvrir en dehors du tumulte du port.",
+    GPS: [43.28802042739375, 5.389619110199852]
+  },
+  {
+    name: "Trattoria Partenope",
+    location: "Marseille",
+    Vegan: "oui",
+    wildstar: "4",
+    Picture: "trattoria-partenope-MARSEILLE.jpg",
+    Description:
+      "Trattoria Partenope offre une ambiance authentique et conviviale, rappelant les charmantes trattorias italiennes. Les pizzas napolitaines, cuites au four à bois, sont particulièrement appréciées, avec des ingrédients frais et une pâte légère. Les arancini et spaghettis aux supions sont également plébiscités. Le service est chaleureux et attentif, renforçant l'impression d'un vrai voyage culinaire en Italie. Prix très raisonnables.",
+    GPS: [43.29974261866287, 5.366436810382611]
+  },
+  {
+    name: "Full Grill",
+    location: "Marseille",
+    Vegan: "oui",
+    wildstar: "5",
+    Picture: "COCOLOBO-STRASBOURG.jpg",
+    Description:
+      "Nouveau restaurant très chaleureux proposant un bel assortiment de viandes grillées, de burgers, salades et tex-mex. Prix très abordable avec une qualité et une belle ambiance au rendez-vous!",
+    GPS: [43.28172155502997, 5.428221252712117]
+  },
+  {
+    name: "Le Dodo",
+    location: "Marseille",
+    Vegan: "oui",
+    wildstar: "4",
+    Picture: "ledodo-MARSEILLE.jpg",
+    Description:
+      "Restaurant mauricien proposant des spécialités typiques (rougail, gâteau de manioc...). Venez voyager aux Antilles à travers vos papilles de l'entrée au dessert!",
+    GPS: [43.28902099263098, 5.386837598883278]
+  },
+  {
+    name: "Daniel et Denise Saint-Jean",
+    location: "Lyon",
+    Vegan: "oui",
+    wildstar: "5",
+    Picture: "daniel&denise-LYON.jpg",
+    Description:
+      "À deux pas de la cathédrale St-Jean, ce bouchon emblématique du Vieux Lyon est tenu par le chef Joseph Viola (Meilleur Ouvrier de France en 2004), déjà connu pour son Daniel et Denise du 3e arrondissement. Au menu de cet opus, une cuisine lyonnaise traditionnelle, qui ravira les amateurs.",
+    GPS: [45.76042846935959, 4.825477771379978]
+  },
+  {
+    name: "Les Burgers De Papa",
+    location: "Lyon",
+    Vegan: "oui",
+    wildstar: "4",
+    Picture: "lesburgersdepapa-LYON.jpg",
+    Description:
+      "Fondés à Lyon Presqu'île en 2013, les Burgers de Papa ont bien grandi mais restent, dans notre cœur et selon nos goûts, les meilleurs burgers du monde. Papa, il n'a pas changé de ses convictions de nous proposer des burgers gourmands et généreux à base de bons produits locaux. Buns du boulanger, viande 100% française avec des steaks hachés sur place chaque matin, frites maison...",
+    GPS: [45.766672529425584, 4.835641235467729]
+  },
+  {
+    name: "Bartholomé",
+    location: "Lyon",
+    Vegan: "oui",
+    wildstar: "5",
+    Picture: "bartholome-lyon.jpg",
+    Description:
+      "Bartholomé, votre restaurant lyonnais spécialisé dans le brunch depuis 2017, vous propose des plats inspirés de l'univers du breakfast Nord Américain, mais aussi des desserts hyper gourmands et maxi sandwichs. Chaque nouvelle carte est élaborée avec soin à partir de produits frais, et toujours avec la volonté de proposer des alternatives sans gluten, avec ou sans lactose ou encore véganes.",
+    GPS: [45.76896033395655, 4.831204396990601]
+  },
+  {
+    name: "Tome",
+    location: "Lyon",
+    Vegan: "oui",
+    wildstar: "4",
+    Picture: "tome-LYON.jpg",
+    Description:
+      "La cuisine fusion de ce restaurant offre des repas authentiques. Allez goûter un filet américain délectable dans Tomé si vous n'êtes pas loin. Commandez un parfait savoureux. A ce lieu, les visiteurs peuvent boire un latté délicieux.",
+    GPS: [45.7694251521317, 4.835473723981344]
+  },
+  {
+    name: "Bistro Abel",
+    location: "Lyon",
+    Vegan: "non",
+    wildstar: "5",
+    Picture: "bistroabel-LYON.jpg",
+    Description:
+      "Le Bistrot d’Abel est le petit frère du Café Comptoir ABEL, à la voute d’Ainay, plus vieux restaurant de Lyon et garant de la tradition des Mères Lyonnaise. Ici, tout est à l’unisson, comme installé depuis des siècles. Une gastronomie bonhomme, mais goûteuse et généreuse, redonne aux palais l’appétence d’une nourriture d’antan. La capitale de la gastronomie trouve ici une nouvelle ambassade du bien manger et du bien recevoir, un nouveau lieu de mœurs culinaires confites dans la tradition ancestrale.",
+    GPS: [45.764193047388254, 4.836881252815976]
   },
 ];
 
@@ -76,7 +233,7 @@ function createCard(restaus) {
     card.appendChild(cardDes);
 
     const rank = document.createElement("p");
-    rank.innerHTML = `${restau.wildstar}⭐`; 
+    rank.innerHTML = `${restau.wildstar}⭐`;
     rank.style.fontSize = "1.5rem";
     card.appendChild(rank);
 
@@ -86,7 +243,7 @@ function createCard(restaus) {
         rank.innerHTML = `${restau.wildstar}⭐`;
       } else {
         card.classList.add("expanded");
-        rank.innerHTML =""
+        rank.innerHTML = ""
         cardDes.innerHTML = `
           ${restau.Description}<br>
           <strong>Location:</strong> ${restau.location}<br>
