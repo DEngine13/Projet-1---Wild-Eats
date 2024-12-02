@@ -231,7 +231,7 @@ btncities.forEach((btn) => {
     const locationRestau = restaurants.filter(
       (restaurant) => restaurant.location == this.innerText
     );
-    sectionCardsTitle.innerHTML = `Les Restaurants a ${this.innerText}`;
+    sectionCardsTitle.innerHTML = `Les Restaurants à ${this.innerText}`;
     createCard(locationRestau); // Crée une carte pour la ville
   });
 });
