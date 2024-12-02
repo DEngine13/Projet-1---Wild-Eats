@@ -32,6 +32,11 @@ body {
   background-color: var(--fourth-color);
 }
 
+p {
+  font-family: "Cabin", sans-serif;
+  color: var(--second-color);
+}
+
 /* NAVBAR */
 
 .off-screen-menu {
@@ -78,7 +83,7 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 3;
 }
 
 .burger.menu {
@@ -226,6 +231,10 @@ header > p {
   -webkit-text-stroke-color: black;
 }
 
+.btncities:focus {
+  border: 2px solid var(--third-color);
+}
+
 .Marseille {
   /* background-image: url(marseille-7352728_1280.jpg); */
   background-size: cover;
@@ -267,6 +276,11 @@ header > p {
   margin: 0.5rem;
 }
 
+.search-input {
+  width: 35%;
+}
+
+/* CARDS */
 .stars {
   display: flex;
   flex-direction: column;
@@ -275,45 +289,44 @@ header > p {
   padding: 0.5rem;
 }
 
-p {
-  font-family: "Cabin, sans-serif";
-  font-size: 0.8rem;
-  color: var(--second-color);
-}
-
-/* CARDS */
-
 .container-stars {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  /* flex-wrap: wrap; */
+  /* justify-content: center; */
   gap: 1rem;
+  overflow-x: scroll;
+  width: 90%;
+}
+
+.sectionCardsTitle {
+  font-size: 2.5rem;
+  padding: 1rem;
 }
 
 .card {
   display: flex;
   flex-direction: column;
-  width: 10rem;
+  min-width: 16rem;
   height: 13rem;
   background-color: var(--fourth-color);
   border-radius: 10px;
   box-shadow: 0px 10px 12px rgba(0, 0, 0, 0.08),
     -4px -4px 12px rgba(0, 0, 0, 0.08);
-  overflow: hidden;
   transition: all 0.3s;
   cursor: pointer;
   padding: 0.6rem;
   margin-top: 2rem;
-  transition: all 0.6s ease;
+  transition: all 0.3s ease;
+  overflow: hidden;
 }
 
 .card.expanded {
   width: 13rem; /* Largeur agrandie */
   height: 19rem; /* Hauteur agrandie */
   padding: 1rem; /* Plus de padding pour le contenu */
-  position: absolute;
-  background-color: var(--main-color);
-  border: 1px solid var(--second-color);
+  /* position: absolute; */
+  background-color: var(--third-color);
+  /* border: 1px solid var(--second-color); */
 }
 
 .card.expanded .card-des {
@@ -364,21 +377,21 @@ p {
 }
 
 #map {
-  height: 300px;
-  width: 350px;
-  border-radius: 30px;
-  margin-top: 6rem;
- }
+  height: 320px;
+  min-width: 95%;
+  border-radius: 15px;
+}
 
 /* FOOTER */
 footer {
   display: flex;
+
   flex-direction: column;
+
   justify-items: center;
   align-items: center;
   background-color: var(--second-color);
-  height: 5rem;
-  margin-top: 20rem;
+  height: 2rem;
 }
 
 footer > p {
@@ -390,7 +403,6 @@ footer > p {
 .brand {
   color: var(--main-color);
   font-size: 0.8rem;
-  text-align: center;
 }
 
 @media screen and (min-width = 992px) {

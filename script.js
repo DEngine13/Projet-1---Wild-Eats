@@ -3,7 +3,7 @@ const restaurants = [
     name: "La Jacobine",
     location: "Paris",
     Vegan: "non",
-    wildstar: "5",
+    wildstar: 5,
     Picture: "la-jacobine-PARIS.jpg",
     Description:
       "Bienvenue à La Jacobine, un lieu où la tradition culinaire française rencontre la passion et l’authenticité.",
@@ -16,8 +16,8 @@ const restaurants = [
     wildstar: "4",
     Picture: "melt-PARIS.jpg",
     Description:
-      "Chez Melt nous reprenons les valeurs culinaires du Texas en fumant toutes nos viandes au feu de bois de chêne, à basse température pendant de longues heures.",
-      GSP: [48.865808415837115, 2.3715107031938003]
+      "Chez Melt nous reprenons les valeurs culinaires du Texas en fumant toutes nos viandes au feu de bois de chêne.",
+    GSP: [48.865808415837115, 2.3715107031938003],
   },
   {
     name: "Aujourd'hui Demain",
@@ -35,9 +35,8 @@ const restaurants = [
     Vegan: "oui",
     wildstar: "5",
     Picture: "lestontonsveg-PARIS.jpg",
-    Description:
-      "On peut être végan sans crier que le tofu c’est le turfu. La preuve avec Amir Taleb et Vincent Peroux de Tontons Veg et leurs burgers veggie qui font flageoler les certitudes d’un viandard.",
-    GPS: [48.87477488723339, 2.355429119886937]
+    Description: "On peut être végan sans crier que le tofu c’est le turfu.",
+    GPS: [48.87477488723339, 2.355429119886937],
   },
   {
     name: "Elie Traiteur",
@@ -46,8 +45,8 @@ const restaurants = [
     wildstar: "4",
     Picture: "elietraiteur-PARIS.jpg",
     Description:
-      "Elie Traiteur, un petit restaurant cosy dans une rue agréable, séduit par sa cuisine libanaise généreuse et savoureuse. Les mezzes et plats variés, préparés avec des produits frais, sont un vrai régal.",
-    GPS: [48.87489257407411, 2.343186566436156]
+      "Elie Traiteur, un petit restaurant cosy dans une rue agréable, séduit par sa cuisine libanaise généreuse et savoureuse.",
+    GPS: [48.87489257407411, 2.343186566436156],
   },
   {
     name: "Les Chauvins Père & Fils",
@@ -56,19 +55,20 @@ const restaurants = [
     wildstar: "5",
     Picture: "leschauvins-STRASBOURG.jpg",
     Description:
-
-      "Niché au cœur du quartier historique de Strasbourg, près de la Cathédrale Notre Dame, le Restaurant Les Chauvins, Père & Fils vous accueille dans un cadre moderne et chaleureux pour une découverte originale des saveurs d’Alsace.",
-    GPS: [48.583730386186744, 7.753328884654923]
-  }, {
+      "Niché au cœur du quartier historique de Strasbourg, près de la Cathédrale Notre Dame.",
+    GPS: [48.583730386186744, 7.753328884654923],
+  },
+  {
     name: "Kohola Strasbourg",
     location: "Strasbourg",
     Vegan: "OUI",
     wildstar: "4",
     Picture: "kohola-STRASBOURG.jpg",
     Description:
-      "Plongez dans l’univers de Koholã avec nos 4 restaurants et venez découvrir notre cuisine d'inspiration hawaïenne avec le poke bowl.",
-    GPS: [48.578576911487836, 7.753118633877819]
-  }, {
+      "Plongez dans l’univers de Koholã et venez découvrir notre cuisine d'inspiration hawaïenne avec le poke bowl.",
+    GPS: [48.578576911487836, 7.753118633877819],
+  },
+  {
     name: "Au Brasseur",
     location: "Strasbourg",
     Vegan: "oui",
@@ -84,7 +84,7 @@ const restaurants = [
     wildstar: "5",
     Picture: "LaFignette-STRASBOURG.jpg",
     Description:
-      "La Fignette, c’est comme une bonne tarte flambée, du feu de bois, des ingrédients locaux et frais, un groupe d’amis autours de la table, des recettes variées et colorées et une occasion à tout moment pour se faire plaisir.",
+      "La Fignette, c’est comme une bonne tarte flambée, du feu de bois, et une occasion à tout moment pour se faire plaisir.",
     GPS: [48.58257476098657, 7.743042180433159]
   }, {
     name: "Coco Lobo",
@@ -103,7 +103,7 @@ const restaurants = [
     wildstar: "4",
     Picture: "lehippiechiccafe-MARSEILLE.jpg",
     Description:
-      "Situé dans le quartier dynamique de la Joliette à Marseille, à deux pas du Panier, notre restaurant offre une expérience culinaire unique.",
+      "Situé dans le quartier dynamique de la Joliette à Marseille, notre restaurant offre une expérience culinaire unique.",
     GPS: [43.30439711550707, 5.36575276432541]
   },
   {
@@ -143,8 +143,8 @@ const restaurants = [
     wildstar: "4",
     Picture: "ledodo-MARSEILLE.jpg",
     Description:
-      "Restaurant mauricien proposant des spécialités typiques (rougail, gâteau de manioc...). Venez voyager aux Antilles à travers vos papilles de l'entrée au dessert!",
-    GPS: [43.28902099263098, 5.386837598883278]
+      "Restaurant mauricien proposant des spécialités typiques . Venez voyager aux Antilles à travers vos papilles de l'entrée au dessert!",
+    GPS: [43.28902099263098, 5.386837598883278],
   },
   {
     name: "Daniel et Denise Saint-Jean",
@@ -153,7 +153,7 @@ const restaurants = [
     wildstar: "5",
     Picture: "daniel&denise-LYON.jpg",
     Description:
-      "À deux pas de la cathédrale St-Jean, ce bouchon emblématique du Vieux Lyon est tenu par le chef Joseph Viola (Meilleur Ouvrier de France en 2004), déjà connu pour son Daniel et Denise du 3e arrondissement.",
+      "À deux pas de la cathédrale St-Jean, ce bouchon emblématique du Vieux Lyon est tenu par le chef Joseph Viola.",
     GPS: [45.76042846935959, 4.825477771379978]
   },
   {
@@ -163,7 +163,7 @@ const restaurants = [
     wildstar: "4",
     Picture: "lesburgersdepapa-LYON.jpg",
     Description:
-      "Fondés à Lyon Presqu'île en 2013, les Burgers de Papa ont bien grandi mais restent, dans notre cœur et selon nos goûts, les meilleurs burgers du monde.",
+      "Fondés à Lyon Presqu'île en 2013, les Burgers de Papa ont bien grandi mais restent, les meilleurs burgers du monde.",
     GPS: [45.766672529425584, 4.835641235467729]
   },
   {
@@ -173,7 +173,7 @@ const restaurants = [
     wildstar: "5",
     Picture: "bartholome-lyon.jpg",
     Description:
-      "Bartholomé, votre restaurant lyonnais spécialisé dans le brunch depuis 2017, vous propose des plats inspirés de l'univers du breakfast Nord Américain, mais aussi des desserts hyper gourmands et maxi sandwichs. ",
+      "Bartholomé, votre restaurant lyonnais spécialisé dans le brunch depuis 2017.",
     GPS: [45.76896033395655, 4.831204396990601]
   },
   {
@@ -183,7 +183,7 @@ const restaurants = [
     wildstar: "4",
     Picture: "tome-LYON.jpg",
     Description:
-      "La cuisine fusion de ce restaurant offre des repas authentiques. Allez goûter un filet américain délectable dans Tomé si vous n'êtes pas loin.",
+      "La cuisine fusion de ce restaurant offre des repas authentiques.",
     GPS: [45.7694251521317, 4.835473723981344]
   },
   {
@@ -193,7 +193,7 @@ const restaurants = [
     wildstar: "5",
     Picture: "bistroabel-LYON.jpg",
     Description:
-      "Le Bistrot d’Abel est le petit frère du Café Comptoir ABEL, à la voute d’Ainay, plus vieux restaurant de Lyon et garant de la tradition des Mères Lyonnaise.",
+      "Le Bistrot d’Abel est le plus vieux restaurant de Lyon et garant de la tradition des Mères Lyonnaise.",
     GPS: [45.764193047388254, 4.836881252815976]
 
   },
@@ -218,25 +218,25 @@ const restaurants = [
     Description:
       "Vous aurez toujours des produits frais et savoureux dans votre assiette. Ceci est notre promesse.",
     GPS: [48.592111887538316, 2.247526124251261],
-
   },
 ];
 
-const sectionCardsTitle = document.querySelector('.sectionCardsTitle');
+const sectionCardsTitle = document.querySelector(".sectionCardsTitle");
 const restauStar = restaurants.filter((restaurant) => restaurant.wildstar >= 4);
-const btncities = document.querySelectorAll('.btncities')
+const btncities = document.querySelectorAll(".btncities");
 
 btncities.forEach((btn) => {
-  btn.addEventListener('click', function () {
+  btn.addEventListener("click", function () {
     // 'this' fait référence au bouton cliqué
-    const locationRestau = restaurants.filter((restaurant) => restaurant.location == this.innerText);
-    sectionCardsTitle.innerHTML =`Les Restaurants a ${this.innerText}`
-    createCard(locationRestau);   // Crée une carte pour la ville
+    const locationRestau = restaurants.filter(
+      (restaurant) => restaurant.location == this.innerText
+    );
+    sectionCardsTitle.innerHTML = `Les Restaurants a ${this.innerText}`;
+    createCard(locationRestau); // Crée une carte pour la ville
   });
 });
 
 function updateCards() {
-
   let filteredrestaurants = restaurants;
 
   if (searchInput.value) {
@@ -244,12 +244,11 @@ function updateCards() {
       restaurant.name.toLowerCase().includes(searchInput.value.toLowerCase())
     );
   }
-createCard(filteredrestaurants)
+  createCard(filteredrestaurants);
 }
 
 const searchInput = document.querySelector(".search-input");
 searchInput.addEventListener("input", () => updateCards());
-
 
 function createCard(restaus) {
   const cards = document.querySelector(".container-stars");
@@ -298,7 +297,7 @@ function createCard(restaus) {
         });
         card.classList.add("expanded");
 
-        rank.innerHTML = ""
+        rank.innerHTML = "";
 
         cardDes.innerHTML = `
           ${restau.Description}<br>
@@ -311,7 +310,9 @@ function createCard(restaus) {
         const [lat, lon] = restau.GPS;
         map.setView([lat, lon, 13]);
         marker.setLatLng([lat, lon]);
-        marker.bindPopup(`<strong>${restau.name}</strong><br>${restau.location}`);
+        marker.bindPopup(
+          `<strong>${restau.name}</strong><br>${restau.location}`
+        );
       }
     });
     cards.appendChild(card);
