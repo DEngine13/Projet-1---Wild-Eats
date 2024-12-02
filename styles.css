@@ -373,11 +373,18 @@ p {
 /* FOOTER */
 footer {
   display: flex;
+  flex-direction: column;
   justify-items: center;
   align-items: center;
   background-color: var(--second-color);
   height: 5rem;
   margin-top: 20rem;
+}
+
+footer > p {
+
+  padding-top: 1.8rem;
+  
 }
 
 .brand {
@@ -387,4 +394,9 @@ footer {
 }
 
 @media screen and (min-width = 992px) {
+
+
+
+
+
 }
