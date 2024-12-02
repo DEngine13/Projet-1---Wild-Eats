@@ -231,6 +231,10 @@ header > p {
   -webkit-text-stroke-color: black;
 }
 
+.btncities:focus {
+  border: 2px solid var(--third-color);
+}
+
 .Marseille {
   /* background-image: url(marseille-7352728_1280.jpg); */
   background-size: cover;
@@ -312,7 +316,7 @@ header > p {
   cursor: pointer;
   padding: 0.6rem;
   margin-top: 2rem;
-  transition: all 0.4 ease;
+  transition: all 0.3s ease;
   overflow: hidden;
 }
 
@@ -320,10 +324,9 @@ header > p {
   width: 13rem; /* Largeur agrandie */
   height: 19rem; /* Hauteur agrandie */
   padding: 1rem; /* Plus de padding pour le contenu */
-  position: absolute;
-  background-color: var(--main-color);
-  border: 1px solid var(--second-color);
-  z-index: 2;
+  /* position: absolute; */
+  background-color: var(--third-color);
+  /* border: 1px solid var(--second-color); */
 }
 
 .card.expanded .card-des {
@@ -376,8 +379,7 @@ header > p {
 #map {
   height: 320px;
   min-width: 95%;
-  border-radius: 30px;
-  margin-top: 5.5rem;
+  border-radius: 15px;
 }
 
 /* FOOTER */
