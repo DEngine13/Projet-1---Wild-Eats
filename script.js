@@ -3,12 +3,11 @@ const restaurants = [
     name: "La Jacobine",
     location: "Paris",
     Vegan: "non",
-    wildstar: 5,
+    wildstar: "5",
     Picture: "la-jacobine-PARIS.jpg",
     Description:
       "Bienvenue à La Jacobine, un lieu où la tradition culinaire française rencontre la passion et l’authenticité.",
     GPS: [48.853473644057445, 2.3392363338910585],
-    prix: 15,
   },
   {
     name: "Melt",
@@ -19,6 +18,7 @@ const restaurants = [
     Description:
       "Chez Melt nous reprenons les valeurs culinaires du Texas en fumant toutes nos viandes au feu de bois de chêne.",
     GSP: [48.865808415837115, 2.3715107031938003],
+    prix: 25,
   },
   {
     name: "Aujourd'hui Demain",
@@ -39,6 +39,7 @@ const restaurants = [
     Picture: "lestontonsveg-PARIS.jpg",
     Description: "On peut être végan sans crier que le tofu c’est le turfu.",
     GPS: [48.87477488723339, 2.355429119886937],
+    prix: 32
   },
   {
     name: "Elie Traiteur",
@@ -49,6 +50,7 @@ const restaurants = [
     Description:
       "Elie Traiteur, un petit restaurant cosy dans une rue agréable, séduit par sa cuisine libanaise généreuse et savoureuse.",
     GPS: [48.87489257407411, 2.343186566436156],
+    prix: 40
   },
   {
     name: "Les Chauvins Père & Fils",
@@ -59,6 +61,7 @@ const restaurants = [
     Description:
       "Niché au cœur du quartier historique de Strasbourg, près de la Cathédrale Notre Dame.",
     GPS: [48.583730386186744, 7.753328884654923],
+    prix: 28
   },
   {
     name: "Kohola Strasbourg",
@@ -69,6 +72,7 @@ const restaurants = [
     Description:
       "Plongez dans l’univers de Koholã et venez découvrir notre cuisine d'inspiration hawaïenne avec le poke bowl.",
     GPS: [48.578576911487836, 7.753118633877819],
+    prix: 18
   },
   {
     name: "Au Brasseur",
@@ -78,8 +82,10 @@ const restaurants = [
     Picture: "aubrasseur-STRASBOURG.jpg",
     Description:
       "Le Brasseur, situé à Strasbourg, est une brasserie où les plats délicieux sont accompagnés d'une ambiance charmante.",
-    GPS: [48.58296036224063, 7.756412216165095]
-  }, {
+    GPS: [48.58296036224063, 7.756412216165095],
+    prix: 45
+  },
+  {
     name: "La Fignette",
     location: "Strasbourg",
     Vegan: "oui",
@@ -87,8 +93,10 @@ const restaurants = [
     Picture: "LaFignette-STRASBOURG.jpg",
     Description:
       "La Fignette, c’est comme une bonne tarte flambée, du feu de bois, et une occasion à tout moment pour se faire plaisir.",
-    GPS: [48.58257476098657, 7.743042180433159]
-  }, {
+    GPS: [48.58257476098657, 7.743042180433159],
+    prix: 38
+  },
+  {
     name: "Coco Lobo",
     location: "Strasbourg",
     Vegan: "oui",
@@ -97,7 +105,8 @@ const restaurants = [
     Description:
 
       "Un Restaurant Tapas mais aussi un Bar de Nuit original et agréable au coeur du quartier de la Petite-France à Strasbourg.",
-    GPS: [48.579234228037535, 7.739355368789756]
+    GPS: [48.579234228037535, 7.739355368789756],
+    prix: 45
   },
   {
     name: "Le Hippie Chic Café",
@@ -177,7 +186,8 @@ const restaurants = [
     Picture: "bartholome-lyon.jpg",
     Description:
       "Bartholomé, votre restaurant lyonnais spécialisé dans le brunch depuis 2017.",
-    GPS: [45.76896033395655, 4.831204396990601]
+    GPS: [45.76896033395655, 4.831204396990601],
+    prix: 45
   },
   {
     name: "Tome",
@@ -187,7 +197,8 @@ const restaurants = [
     Picture: "tome-LYON.jpg",
     Description:
       "La cuisine fusion de ce restaurant offre des repas authentiques.",
-    GPS: [45.7694251521317, 4.835473723981344]
+    GPS: [45.7694251521317, 4.835473723981344],
+    prix: 25
   },
   {
     name: "Bistro Abel",
@@ -197,8 +208,8 @@ const restaurants = [
     Picture: "bistroabel-LYON.jpg",
     Description:
       "Le Bistrot d’Abel est le plus vieux restaurant de Lyon et garant de la tradition des Mères Lyonnaise.",
-    GPS: [45.764193047388254, 4.836881252815976]
-
+    GPS: [45.764193047388254, 4.836881252815976],
+    prix: 15
   },
   {
     name: "La Brigade Du Tigre",
@@ -210,6 +221,7 @@ const restaurants = [
     Description:
       "Une précision des goûts récompensé par Michelin comme jeune talent très prometteur",
     GPS: [48.873544332552235, 2.3479134829341763],
+    prix: 30
   },
   {
     name: "L'Ardoise",
@@ -343,9 +355,13 @@ hamMenu.addEventListener("click", () => {
 });
 
 // FILTRES
-
-const btntrier = document.querySelector(".sortbutton");
-btntrier.addEventListener("click"), () => {
-  const restaurantsTries = restaurants.sort((a, b) => a.prix - b.prix);
-  createCard(restaurantsTries)
-}
+//Code groupe 2//
+// // document.querySelector(".sortbutton").addEventListener("click", () => {
+// //   const restaurantsTries = [...restaurants].sort((a, b) => a.prix - b.prix);
+// //   createCard(restaurantsTries);
+// })
+//Code CGPT//
+document.getElementById("sort-price-button").addEventListener("click", () => {
+  const sortedRestaurants = [...restaurants].sort((a, b) => b.prix - a.prix);
+  createCard(sortedRestaurants);
+});
