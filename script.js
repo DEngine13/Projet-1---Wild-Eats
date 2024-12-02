@@ -8,6 +8,7 @@ const restaurants = [
     Description:
       "Bienvenue à La Jacobine, un lieu où la tradition culinaire française rencontre la passion et l’authenticité. Situé au cœur du quartier historique de Saint-Germain-des-Prés à Paris, ce restaurant incarne l’esprit d’une époque révolue tout en offrant une expérience gastronomique moderne et raffinée.",
     GPS: [48.853473644057445, 2.3392363338910585],
+    prix: 15,
   },
   {
     name: "Melt",
@@ -17,7 +18,8 @@ const restaurants = [
     Picture: "melt-PARIS.jpg",
     Description:
       "Chez Melt nous reprenons les valeurs culinaires du Texas en fumant toutes nos viandes au feu de bois de chêne, à basse température pendant de longues heures. Notre barbecue est généreux, chaleureux mais surtout familial et croyez-nous, vous ne risquez pas de l’oublier !",
-    GSP: [48.865808415837115, 2.3715107031938003]
+    GSP: [48.865808415837115, 2.3715107031938003],
+    prix: 45,
   },
   {
     name: "Aujourd'hui Demain",
@@ -28,6 +30,7 @@ const restaurants = [
     Description:
       "Le concept de ce lieu est avant tout de rassembler en un seul et même endroit les meilleurs produits vegan. Que ce soit dans votre assiette au restaurant, ou bien directement à acheter dans leur boutique, Aujourd’hui Demain vous garantit de belles découvertes culinaires. Et ce n’est pas tout, car le concept-store organise également différents types d’événements comme des projections ou des dégustations pour tous les gourmands.",
     GPS: [48.85900070993327, 2.375116081780484],
+    prix: 20
   },
   {
     name: "Les Tontons Veg",
@@ -37,7 +40,8 @@ const restaurants = [
     Picture: "lestontonsveg-PARIS.jpg",
     Description:
       "On peut être végan sans crier que le tofu c’est le turfu. La preuve avec Amir Taleb et Vincent Peroux de Tontons Veg et leurs burgers veggie qui font flageoler les certitudes d’un viandard. Car ici, les hachés rouge sang que retourne lestement Vincent n’ont pas été découpés au cul d’un angus mais proviennent de chez Beyond Meat, la Rolls du simili-steak.",
-    GPS: [48.87477488723339, 2.355429119886937]
+    GPS: [48.87477488723339, 2.355429119886937],
+    prix: 30
   },
   {
     name: "Elie Traiteur",
@@ -47,7 +51,8 @@ const restaurants = [
     Picture: "elietraiteur-PARIS.jpg",
     Description:
       "Elie Traiteur, un petit restaurant cosy dans une rue agréable, séduit par sa cuisine libanaise généreuse et savoureuse. Les mezzes et plats variés, préparés avec des produits frais, sont un vrai régal. Le rapport qualité-prix est excellent.",
-    GPS: [48.87489257407411, 2.343186566436156]
+    GPS: [48.87489257407411, 2.343186566436156],
+    prix: 50,
   },
   {
     name: "Les Chauvins Père & Fils",
@@ -57,7 +62,8 @@ const restaurants = [
     Picture: "leschauvins-STRASBOURG.jpg",
     Description:
       "Niché au cœur du quartier historique de Strasbourg, près de la Cathédrale Notre Dame, le Restaurant Les Chauvins, Père & Fils vous accueille dans un cadre moderne et chaleureux pour une découverte originale des saveurs d’Alsace. Eveillez vos papilles et vos sens en savourant de délicieux tapas alsaciennes, élaborés par notre chef.",
-    GPS: [48.583730386186744, 7.753328884654923]
+    GPS: [48.583730386186744, 7.753328884654923],
+    prix: 35,
   }, {
     name: "Kohola Strasbourg",
     location: "Strasbourg",
@@ -66,7 +72,8 @@ const restaurants = [
     Picture: "kohola-STRASBOURG.jpg",
     Description:
       "Plongez dans l’univers de Koholã avec nos 4 restaurants et venez découvrir notre cuisine d'inspiration hawaïenne avec le poke bowl, un plat traditionnel qui se compose de poisson cru très frais coupé en dés, de fruits et légumes fraîchement cuisinés, le tout servi sur une base de riz, de quinoa ou de salade! ",
-    GPS: [48.578576911487836, 7.753118633877819]
+    GPS: [48.578576911487836, 7.753118633877819],
+    prix: 40
   }, {
     name: "Au Brasseur",
     location: "Strasbourg",
@@ -75,7 +82,8 @@ const restaurants = [
     Picture: "aubrasseur-STRASBOURG.jpg",
     Description:
       "Le Brasseur, situé à Strasbourg, est une brasserie où les plats délicieux sont accompagnés d'une ambiance charmante. La carte variée propose des salades, des spécialités alsaciennes, des plats de brasserie, des viandes, des welsh, des flammekueche salées et sucrées, des desserts, des glaces et des assiettes de fromages. Des incontournables comme la flammekueche pomme flambée fleur de bière et la glace délice du Brasseur sauront vous séduire. N'hésitez pas à venir découvrir ce lieu où la gastronomie rencontre la convivialité.",
-    GPS: [48.58296036224063, 7.756412216165095]
+    GPS: [48.58296036224063, 7.756412216165095],
+    prix: 55
   }, {
     name: "La Fignette",
     location: "Strasbourg",
@@ -84,7 +92,8 @@ const restaurants = [
     Picture: "LaFignette-STRASBOURG.jpg",
     Description:
       "La Fignette, c’est comme une bonne tarte flambée, du feu de bois, des ingrédients locaux et frais, un groupe d’amis autours de la table, des recettes variées et colorées et une occasion à tout moment pour se faire plaisir. La Fignette, c’est un bistrot de quartier, ouvert toute la journée et sur le monde où le voyageur sera toujours accueilli avec la joie du partage et l’habitué comme un ami. La Fignette, c’est un bout d’Alsace forte de sa diversité, de ses valeurs et de sa facilité à parler plusieurs langues. Elle défend ses saveurs et n’a pas peur de les mélanger aux plaisirs d’ailleurs. ",
-    GPS: [48.58257476098657, 7.743042180433159]
+    GPS: [48.58257476098657, 7.743042180433159],
+    prix: 40
   }, {
     name: "Coco Lobo",
     location: "Strasbourg",
@@ -93,7 +102,8 @@ const restaurants = [
     Picture: "COCOLOBO-STRASBOURG.jpg",
     Description:
       "Un Restaurant Tapas mais aussi un Bar de Nuit original et agréable au coeur du quartier de la Petite-France à Strasbourg. Faire la fête sur des rythmes latinos est le maître mot ici, tout en goûtant aux cocktails et aux spécialités culinaires espagnoles !",
-    GPS: [48.579234228037535, 7.739355368789756]
+    GPS: [48.579234228037535, 7.739355368789756],
+    prix: 20
   },
   {
     name: "Le Hippie Chic Café",
@@ -103,7 +113,8 @@ const restaurants = [
     Picture: "lehippiechiccafe-MARSEILLE.jpg",
     Description:
       "Situé dans le quartier dynamique de la Joliette à Marseille, à deux pas du Panier, notre restaurant offre une expérience culinaire unique. En combinant des ingrédients locaux et notre savoir-faire, nous proposons à nos clients des plats originaux faits maison.",
-    GPS: [43.30439711550707, 5.36575276432541]
+    GPS: [43.30439711550707, 5.36575276432541],
+    prix: 35
   },
   {
     name: "Le Fantastique",
@@ -335,3 +346,11 @@ hamMenu.addEventListener("click", () => {
   hamMenu.classList.toggle("active");
   offScreenMenu.classList.toggle("active");
 });
+
+// FILTRES
+
+const btntrier = document.querySelector(".sortbutton");
+btntrier.addEventListener("click"), () => {
+  const restaurantsTries = restaurants.sort((a, b) => a.prix - b.prix);
+  createCard(restaurantsTries)
+}
