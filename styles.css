@@ -201,6 +201,10 @@ header > p {
   border-radius: 20px;
 }
 
+.villes > h2 {
+  text-decoration: underline;
+}
+
 .villes > ul {
   display: flex;
   flex-wrap: wrap;
@@ -229,11 +233,18 @@ header > p {
 
   -webkit-text-stroke-width: 0.2px;
   -webkit-text-stroke-color: black;
-  border: 0.5px solid var(--second-color)
+  border: 0.5px solid var(--second-color);
 }
 
 .btncities:focus {
   border: 3px solid var(--main-color);
+}
+
+.line {
+  flex-grow: 0.3;
+  height: 1px;
+  background-color: black; /* Line color /
+  margin: 0 10px; / Space between images */
 }
 
 .Marseille {
@@ -310,6 +321,7 @@ header > p {
   display: flex;
   flex-direction: column;
   min-width: 16rem;
+  max-width: 16rem;
   height: 13rem;
   background-color: var(--fourth-color);
   border-radius: 10px;
@@ -325,7 +337,7 @@ header > p {
 
 .card.expanded {
   width: 13rem; /* Largeur agrandie */
-  height: 19rem; /* Hauteur agrandie */
+  height: 22rem; /* Hauteur agrandie */
   padding: 1rem; /* Plus de padding pour le contenu */
   /* position: absolute; */
   background-color: var(--third-color);
@@ -379,6 +391,19 @@ header > p {
   cursor: default;
 }
 
+.card-des > a {
+  text-decoration: underline;
+  margin-top: 0.5rem;
+}
+
+.card-des > a:hover {
+  text-decoration: none;
+  background-color: var(--fourth-color);
+  border-radius: 10px;
+  padding: 0.1rem;
+  cursor: pointer;
+}
+
 #map {
   height: 320px;
   min-width: 95%;
@@ -396,9 +421,7 @@ footer {
 }
 
 footer > p {
-
-padding-top: 0.5rem;
-  
+  padding-top: 0.5rem;
 }
 
 .brand {
@@ -406,86 +429,76 @@ padding-top: 0.5rem;
   font-size: 0.8rem;
 }
 
-
 /* MEDIA QUERIES */
 
-
-
-@media screen and (min-width : 850px) {
-
+@media screen and (min-width: 990px) {
   .lien-nav {
-   
     flex-direction: row;
     justify-content: space-around;
     gap: 1rem;
     margin-right: 1rem;
     font-size: 1.2rem;
-    
+  }
+
+  .lien-nav > li > a {
+    border: 1px solid;
+    padding: 0.5rem;
+    border-radius: 6%;
+  }
+
+  .lien-nav > li:nth-child(2) > a {
+    background-color: #ff914d;
+  }
+
+  .logo {
+    margin-left: 10rem;
+    height: 7rem;
+  }
+
+  header > h1 {
+    font-size: 6.5rem;
+    padding-top: 2rem;
+  }
+
+  .villes {
+    margin: 1.5rem 15rem 1.5rem 15rem;
+    justify-content: center;
+  }
+
+  .btncities {
+    padding: 0;
+    width: 12rem;
+    height: 12rem;
+  }
+
+  .filtre > label {
+    margin-top: 1rem;
+  }
+
+  .filtre {
+    align-items: center;
+  }
+
+  .filtre > h2 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .container-stars {
+    margin-bottom: 2rem;
+  }
 }
 
-.lien-nav > li > a {
-
-  border: 1px solid;
-  padding: 0.5rem;
-  border-radius: 6%;
-
+@media screen and (min-width: 990px) and (max-width: 1376px) {
+  .line {
+    display: none;
+  }
 }
 
-.lien-nav > li:nth-child(2) > a {
-
-  background-color: #ff914d;
-}
-
-.logo {
-
-  margin-left: 10rem;
-  height: 7rem;
-  
-}
-
-header > h1 {
-
-  font-size: 6rem;
-  padding-top: 2rem;
-  
-}
-
-.villes {
-
-  margin : 1.5rem 5rem 1.5rem 5rem;
-
-
-}
-
-.btncities {
-
-  width: 10rem;
-  height: 10rem;
-}
-
-
-.filtre > label {
-
-  margin-top: 1rem;
-}
-
-.filtre {
-
-  align-items: center;
-  
-}
-
-.filtre > h2 {
-
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
-.container-stars {
-
-  margin-bottom: 2rem;
-  
+@media screen and (max-width: 624px) {
+  .line {
+    display: none;
+  }
 }
 
 
-}
