@@ -244,7 +244,6 @@ const restaurants = [
   },
 ];
 
-
 const sectionCardsTitle = document.querySelector(".sectionCardsTitle");
 const restauStar = restaurants.filter((restaurant) => restaurant.wildstar >= 4);
 const btncities = document.querySelectorAll(".btncities");
@@ -334,7 +333,9 @@ function createCard(restaus) {
         cardDes.innerHTML = `
           ${restau.Description}<br>
           <strong>Ville:</strong> ${restau.location}<br>
-          <strong>Vegan:</strong> ${restau.Vegan ? "Yes" : "No"}<br>${restau.wildstar}⭐ - prix moyen : ${restau.prix}€<br><a>Commander ici</a>`;
+          <strong>Vegan:</strong> ${restau.Vegan ? "Yes" : "No"}<br>${
+          restau.wildstar
+        }⭐ - prix moyen : ${restau.prix}€<br><a>Commander ici</a>`;
 
         const [lat, lon] = restau.GPS;
         map.setView([lat, lon, 13]);
