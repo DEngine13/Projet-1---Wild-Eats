@@ -1,14 +1,5 @@
 const restaurants = [
-  {
-    name: "La Jacobine",
-    location: "Paris",
-    Vegan: "non",
-    wildstar: "5",
-    Picture: "la-jacobine-PARIS.jpg",
-    Description:
-      "Bienvenue à La Jacobine, un lieu où la tradition culinaire française rencontre la passion et l’authenticité.",
-    GPS: [48.853473644057445, 2.3392363338910585],
-  },
+  
   {
     name: "Melt",
     location: "Paris",
