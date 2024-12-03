@@ -198,9 +198,71 @@ header {
   margin: 2rem 5rem;
 }
 
+.leftHeader {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  
+}
+
+.leftHeader > h2 {
+
+  font-family: "Poppins", sans-serif;
+  font-style: none;
+  text-decoration: none;
+  font-size: 2rem;
+  margin-left: 1rem;
+}
+
 .leftHeader > h2 > span {
   color: var(--main-color);
+  
 }
+
+.btns-search {
+
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+  padding: 1rem 1rem 1rem 1rem;
+  border-radius: 5% / 50%;
+
+}
+
+.search-input {
+  border: none;
+  
+}
+
+
+.btns-search > button {
+  margin-left: 2rem;
+  background-color: var(--main-color);
+  border: none;
+  border-radius: 20% / 50%;
+  margin-left: 20rem;
+  padding : 1rem 1.5rem 1rem 1.5rem;
+
+}
+
+.btns-search > button > a {
+  text-decoration: none;
+  font-style: none;
+  color: #fff;
+}
+
+  
+  
+  
+
+
+
+
+/* .leftHeader > h2 > span { */
+  /* color: var(--main-color); */
+  
+/* } */
 
 /* VILLE */
 

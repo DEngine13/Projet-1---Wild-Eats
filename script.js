@@ -284,6 +284,8 @@ function updateCards() {
 const searchInput = document.querySelector(".search-input");
 searchInput.addEventListener("input", () => updateCards());
 
+
+
 function createCard(restaus) {
   const cards = document.querySelector(".container-stars");
   const sectionStar = document.querySelector(".stars");
@@ -398,5 +400,7 @@ document.getElementById("sort-price-button").addEventListener("click", () => {
     ? "Trier par prix (croissant)"
     : "Trier par prix (décroissant)";
 });
+
+
 
 
