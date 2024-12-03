@@ -248,6 +248,11 @@ const sectionCardsTitle = document.querySelector(".sectionCardsTitle");
 const restauStar = restaurants.filter((restaurant) => restaurant.wildstar >= 4);
 const btncities = document.querySelectorAll(".btncities");
 
+const modal = document.querySelector('dialog');
+const closeModal = document.querySelector('.close_modal');
+closeModal.addEventListener('click', () => modal.close());
+
+
 let currentFilter = restaurants;
 
 btncities.forEach((btn) => {
@@ -256,7 +261,10 @@ btncities.forEach((btn) => {
     const locationRestau = restaurants.filter(
       (restaurant) => restaurant.location == this.innerText
     );
-    sectionCardsTitle.innerHTML = `Les Restaurants à ${this.innerText}`;
+
+    sectionCardsTitle.innerHTML = `Les Restaurants à <span style="color: var(--main-color);">${this.innerText}</span>`;
+
+    
     currentFilter = locationRestau;
     createCard(locationRestau); // Crée une carte pour la ville
   });
@@ -303,10 +311,10 @@ function createCard(restaus) {
     cardTitle.innerText = restau.name;
     card.appendChild(cardTitle);
 
-    const cardDes = document.createElement("p");
-    cardDes.classList.add("card-des");
-    cardDes.innerHTML = restau.Description;
-    card.appendChild(cardDes);
+    // const cardDes = document.createElement("p");
+    // cardDes.classList.add("card-des");
+    // cardDes.innerHTML = restau.Description;
+    // card.appendChild(cardDes);
 
     const rank = document.createElement("p");
     rank.innerHTML = `${restau.wildstar}⭐ - prix moyen : ${restau.prix}€`;
@@ -319,31 +327,29 @@ function createCard(restaus) {
     card.appendChild(rank);
 
     card.addEventListener("click", () => {
-      if (card.classList.contains("expanded")) {
-        card.classList.remove("expanded");
-        rank.innerHTML = `${restau.wildstar}⭐ - prix moyen : ${restau.prix}€`;
-      } else {
-        document.querySelectorAll(".card.expanded").forEach((expandedCard) => {
-          expandedCard.classList.remove("expanded");
-        });
-        card.classList.add("expanded");
+    //   if (card.classList.contains("expanded")) {
+    //     card.classList.remove("expanded");
+    //     rank.innerHTML = `${restau.wildstar}⭐ - prix moyen : ${restau.prix}€`;
+    //   } else {
+    //     document.querySelectorAll(".card.expanded").forEach((expandedCard) => {
+    //       expandedCard.classList.remove("expanded");
+    //     });
+    //     card.classList.add("expanded");
 
-        rank.innerHTML = "";
+    //     rank.innerHTML = "";
 
-        cardDes.innerHTML = `
-          ${restau.Description}<br>
-          <strong>Ville:</strong> ${restau.location}<br>
-          <strong>Vegan:</strong> ${restau.Vegan ? "Yes" : "No"}<br>${
-          restau.wildstar
-        }⭐ - prix moyen : ${restau.prix}€<br><a>Commander ici</a>`;
-
-        const [lat, lon] = restau.GPS;
-        map.setView([lat, lon, 13]);
-        marker.setLatLng([lat, lon]);
-        marker.bindPopup(
-          `<strong>${restau.name}</strong><br>${restau.location}`
-        );
-      }
+    //     cardDes.innerHTML = `
+    //       ${restau.Description}<br>
+    //       <strong>Ville:</strong> ${restau.location}<br>
+    //       <strong>Vegan:</strong> ${restau.Vegan ? "Yes" : "No"}<br>${
+    //       restau.wildstar
+    //     }⭐ - prix moyen : ${restau.prix}€<br><a>Commander ici</a>`;
+  modal.showModal()
+    const [lat, lon] = restau.GPS;
+    map.setView([lat, lon, 13]);
+    marker.setLatLng([lat, lon]);
+    marker.bindPopup(`<strong>${restau.name}</strong><br>${restau.location}`);
+    //   }
     });
     cards.appendChild(card);
   });
@@ -363,14 +369,15 @@ marker.bindPopup("<b>Le Loreum</b><br>Paris").openPopup();
 
 // MENU BURGER
 
-// const hamMenu = document.querySelector(".burger-menu");
+const hamMenu = document.querySelector(".burger-menu");
 
-// const offScreenMenu = document.querySelector(".off-screen-menu");
+const offScreenMenu = document.querySelector(".off-screen-menu");
 
-// hamMenu.addEventListener("click", () => {
-//   hamMenu.classList.toggle("active");
-//   offScreenMenu.classList.toggle("active");
-// });
+hamMenu.addEventListener("click", () => {
+  hamMenu.classList.toggle("active");
+  offScreenMenu.classList.toggle("active");
+});
+
 
 let isPriceAscending = true;
 
@@ -391,3 +398,5 @@ document.getElementById("sort-price-button").addEventListener("click", () => {
     ? "Trier par prix (croissant)"
     : "Trier par prix (décroissant)";
 });
+
+
