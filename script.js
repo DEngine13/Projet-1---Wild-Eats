@@ -363,14 +363,14 @@ marker.bindPopup("<b>Le Loreum</b><br>Paris").openPopup();
 
 // MENU BURGER
 
-// const hamMenu = document.querySelector(".burger-menu");
+const hamMenu = document.querySelector(".burger-menu");
 
-// const offScreenMenu = document.querySelector(".off-screen-menu");
+const offScreenMenu = document.querySelector(".off-screen-menu");
 
-// hamMenu.addEventListener("click", () => {
-//   hamMenu.classList.toggle("active");
-//   offScreenMenu.classList.toggle("active");
-// });
+hamMenu.addEventListener("click", () => {
+  hamMenu.classList.toggle("active");
+  offScreenMenu.classList.toggle("active");
+});
 
 let isPriceAscending = true;
 
