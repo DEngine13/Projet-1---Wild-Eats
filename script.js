@@ -247,11 +247,10 @@ const restaurants = [
 const sectionCardsTitle = document.querySelector(".sectionCardsTitle");
 const restauStar = restaurants.filter((restaurant) => restaurant.wildstar >= 4);
 const btncities = document.querySelectorAll(".btncities");
+const savoirPlus = document.querySelector(".savoirPlus");
 
-const modal = document.querySelector('dialog');
-const closeModal = document.querySelector('.close_modal');
-closeModal.addEventListener('click', () => modal.close());
-
+const modal = document.querySelector("dialog");
+const closeModal = document.querySelector(".close_modal");
 
 let currentFilter = restaurants;
 
@@ -264,7 +263,6 @@ btncities.forEach((btn) => {
 
     sectionCardsTitle.innerHTML = `Les Restaurants à <span style="color: var(--main-color);">${this.innerText}</span>`;
 
-    
     currentFilter = locationRestau;
     createCard(locationRestau); // Crée une carte pour la ville
   });
@@ -326,30 +324,81 @@ function createCard(restaus) {
     rank.style.fontSize = "1rem";
     card.appendChild(rank);
 
+    const btnDetail = document.createElement("a");
+    btnDetail.innerHTML = "En savoir plus";
+    card.appendChild(btnDetail);
+
+    btnDetail.addEventListener("click", () => {
+      savoirPlus.innerHTML = "";
+
+      modal.showModal();
+
+      const descImg = document.createElement("img");
+      descImg.src = restau.Picture;
+      savoirPlus.appendChild(descImg);
+
+      const descVeg = document.createElement("img");
+      if (restau.Vegan === "oui") {
+        descVeg.src = "newImages/logoVegan2.png";
+        savoirPlus.append(descVeg);
+      }
+
+      const descTitle = document.createElement("h3");
+      descTitle.textContent = restau.name;
+      savoirPlus.appendChild(descTitle);
+
+      const descStars = document.createElement("p");
+      descStars.textContent = `${restau.wildstar}⭐ | ~${restau.prix}€`;
+      savoirPlus.appendChild(descStars);
+
+      const descPlus = document.createElement("p");
+      descPlus.textContent = restau.Description;
+      savoirPlus.appendChild(descPlus);
+
+      const descMap = document.createElement("div");
+      descMap.id = "mapdesc";
+      savoirPlus.appendChild(descMap);
+      const [lat, lon] = restau.GPS;
+      let mapDesc = L.map("mapdesc").setView([lat, lon], 15);
+
+      L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        maxZoom: 19,
+        attribution:
+          '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+      }).addTo(mapDesc);
+
+      let markerDesc = L.marker([lat, lon]).addTo(mapDesc);
+      markerDesc.bindPopup(`<strong>${restau.name}</strong><br>${restau.location}`).openPopup();
+
+      const closeModal = document.createElement("button");
+      closeModal.textContent = "✖";
+      savoirPlus.appendChild(closeModal);
+      closeModal.addEventListener("click", () => modal.close());
+    });
+
     card.addEventListener("click", () => {
-    //   if (card.classList.contains("expanded")) {
-    //     card.classList.remove("expanded");
-    //     rank.innerHTML = `${restau.wildstar}⭐ - prix moyen : ${restau.prix}€`;
-    //   } else {
-    //     document.querySelectorAll(".card.expanded").forEach((expandedCard) => {
-    //       expandedCard.classList.remove("expanded");
-    //     });
-    //     card.classList.add("expanded");
+      //   if (card.classList.contains("expanded")) {
+      //     card.classList.remove("expanded");
+      //     rank.innerHTML = `${restau.wildstar}⭐ - prix moyen : ${restau.prix}€`;
+      //   } else {
+      //     document.querySelectorAll(".card.expanded").forEach((expandedCard) => {
+      //       expandedCard.classList.remove("expanded");
+      //     });
+      //     card.classList.add("expanded");
 
-    //     rank.innerHTML = "";
+      //     rank.innerHTML = "";
 
-    //     cardDes.innerHTML = `
-    //       ${restau.Description}<br>
-    //       <strong>Ville:</strong> ${restau.location}<br>
-    //       <strong>Vegan:</strong> ${restau.Vegan ? "Yes" : "No"}<br>${
-    //       restau.wildstar
-    //     }⭐ - prix moyen : ${restau.prix}€<br><a>Commander ici</a>`;
-  modal.showModal()
-    const [lat, lon] = restau.GPS;
-    map.setView([lat, lon, 13]);
-    marker.setLatLng([lat, lon]);
-    marker.bindPopup(`<strong>${restau.name}</strong><br>${restau.location}`);
-    //   }
+      //     cardDes.innerHTML = `
+      //       ${restau.Description}<br>
+      //       <strong>Ville:</strong> ${restau.location}<br>
+      //       <strong>Vegan:</strong> ${restau.Vegan ? "Yes" : "No"}<br>${
+      //       restau.wildstar
+      //     }⭐ - prix moyen : ${restau.prix}€<br><a>Commander ici</a>`;
+      const [lat, lon] = restau.GPS;
+      map.setView([lat, lon, 13]);
+      marker.setLatLng([lat, lon]);
+      marker.bindPopup(`<strong>${restau.name}</strong><br>${restau.location}`);
+      //   }
     });
     cards.appendChild(card);
   });
@@ -378,7 +427,6 @@ hamMenu.addEventListener("click", () => {
   offScreenMenu.classList.toggle("active");
 });
 
-
 let isPriceAscending = true;
 
 document.getElementById("sort-price-button").addEventListener("click", () => {
@@ -398,5 +446,3 @@ document.getElementById("sort-price-button").addEventListener("click", () => {
     ? "Trier par prix (croissant)"
     : "Trier par prix (décroissant)";
 });
-
-
