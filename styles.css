@@ -1,7 +1,7 @@
 /* FONTS */
 @import url("https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=League+Spartan:wght@100..900&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Mallanna&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Puritan:ital,wght@0,400;0,700;1,400;1,700&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 /* GENERAL */
 :root {
@@ -68,10 +68,8 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 0 1rem 0 1rem;
-  box-shadow:
-  0px 0px 29.1px rgba(0, 0, 0, 0.035),
-  0px 0px 232px rgba(0, 0, 0, 0.07)
-;
+  box-shadow: 0px 0px 29.1px rgba(0, 0, 0, 0.035),
+    0px 0px 232px rgba(0, 0, 0, 0.07);
 }
 
 /* .burger.menu {
@@ -163,8 +161,6 @@ span:nth-child(3) {
   padding: 0.5rem 2.5rem 0.5rem 2.5rem;
 }
 
-
-
 .lien-nav > li > a:hover {
   text-decoration: underline;
 }
@@ -175,17 +171,18 @@ span:nth-child(3) {
 
 /* HEADER */
 header {
- display: flex;
- justify-content: flex-start;
- align-items: center;
- background-image: url("newImages/headerBG.png");
- height: 17.4rem;
- background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-image: url("newImages/headerBG.png");
+  height: 17.4rem;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   color: #fff;
   padding: 1rem;
-  margin: 2rem 5rem 1rem 5rem ;
+  width: 0 auto ;
+  margin: 2rem 5rem;
 }
 
 .leftHeader > h2 > span {
@@ -197,15 +194,14 @@ header {
 .villes {
   /* background-color: var(--third-color); */
   /* border: 1px dashed var(--second-color); */
-  padding: 1rem;
 }
 
 .villes > ul {
   display: flex;
-  justify-content: space-evenly;
+  flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
-  gap: 1rem;
-  padding-top: 1rem;
+  margin: 0 6rem;
 }
 
 .btncities {
@@ -272,19 +268,23 @@ header {
 /* CARDS */
 .stars {
   display: flex;
-  flex-direction: column;
-  justify-items: center;
+
+  justify-content: center;
   align-items: center;
-  padding: 0.5rem;
 }
 
 .container-stars {
-  display: flex;
+  display: grid;
+ grid-template-columns: 1fr;
+ grid-template-rows: 1fr 1fr 1fr 1fr;
   /* flex-wrap: wrap; */
   /* justify-content: center; */
+  flex-direction: column;
+  align-items: center;
   gap: 1rem;
-  overflow-x: scroll;
-  width: 90%;
+  overflow-y: scroll;
+  width: 25%;
+  height: 40rem;
 }
 
 .sectionCardsTitle {
@@ -293,15 +293,9 @@ header {
 }
 
 .card {
-  display: flex;
-  flex-direction: column;
-  min-width: 16rem;
-  max-width: 16rem;
+  min-width: 24rem;
+  max-width: 20rem;
   height: 13rem;
-  background-color: var(--fourth-color);
-  border-radius: 10px;
-  box-shadow: 0px 10px 12px rgba(0, 0, 0, 0.08),
-    -4px -4px 12px rgba(0, 0, 0, 0.08);
   transition: all 0.3s;
   cursor: pointer;
   padding: 0.6rem;
@@ -384,8 +378,8 @@ header {
 }
 
 #map {
-  height: 320px;
-  min-width: 95%;
+  height: 40rem;
+  min-width: 70%;
   border-radius: 15px;
 }
 
