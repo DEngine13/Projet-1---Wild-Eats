@@ -434,7 +434,7 @@ footer {
   flex-direction: column;
   justify-items: center;
   align-items: center;
-  background-color: var(--second-color);
+  background-color: var(--main-color);
   height: 2rem;
 }
 
@@ -443,11 +443,12 @@ footer > p {
 }
 
 .brand {
-  color: var(--main-color);
+  color: var(--fourth-color);
   font-size: 0.8rem;
 }
 
 /* MEDIA QUERIES */
+
 
 @media screen and (max-width: 1060px) {
   
