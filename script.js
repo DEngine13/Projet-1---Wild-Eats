@@ -372,7 +372,13 @@ function createCard(restaus) {
         .bindPopup(`<strong>${restau.name}</strong><br>${restau.location}`)
         .openPopup();
 
+        const descbtn = document.createElement("button");
+        descbtn.classList.add("desc_btn");
+        descbtn.textContent = "Je commande";
+      savoirPlus.appendChild(descbtn);
+
       const closeModal = document.createElement("button");
+      closeModal.classList.add("close_Modal");
       closeModal.textContent = "✖";
       savoirPlus.appendChild(closeModal);
       closeModal.addEventListener("click", () => modal.close());

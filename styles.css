@@ -255,6 +255,7 @@ h2 {
   font-weight: 200;
   font-size: 2.5rem;
   padding: 1rem;
+  margin-top: 1rem;
 }
 
 .btncities {
@@ -424,7 +425,7 @@ dialog {
   align-self: flex-end;
 }
 
-.savoirPlus > button {
+.close_Modal {
   border: 0px;
   background-color: #fff;
   align-self: flex-end;
@@ -435,6 +436,52 @@ dialog {
   color: var(--main-color);
   font-weight: bolder;
   font-size: 1.3rem;
+}
+
+/* From Uiverse.io by vinodjangid07 */ 
+.desc_btn {
+  margin-top: 1rem;
+  width: 130px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(15, 15, 15);
+  border: none;
+  color: white;
+  font-weight: 600;
+  gap: 8px;
+  cursor: pointer;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.103);
+  position: relative;
+  overflow: hidden;
+  transition-duration: .3s;
+  font-size: 0.8rem;
+  align-self: center;
+}
+
+.desc_btn::before {
+  width: 130px;
+  height: 130px;
+  position: absolute;
+  content: "";
+  background-color: white;
+  border-radius: 50%;
+  left: -100%;
+  top: 0;
+  transition-duration: .3s;
+  mix-blend-mode: difference;
+}
+
+.desc_btn:hover::before {
+  transition-duration: .3s;
+  transform: translate(100%,-50%);
+  border-radius: 0;
+}
+
+.desc_btn:active {
+  transform: translate(5px,5px);
+  transition-duration: .3s;
 }
 
 #mapdesc {
@@ -563,7 +610,7 @@ footer > p {
 
   .titleLogo > p > span {
     text-align: center;
-    font-weight: 500;
+    font-weight: 00;
   }
 
   .lien-nav {
@@ -587,6 +634,10 @@ footer > p {
   header {
     margin: 0rem;
     width: 100%;
+  }
+
+  .leftHeader > h2 > span {
+    font-weight: 500;
   }
 
   h2 {
