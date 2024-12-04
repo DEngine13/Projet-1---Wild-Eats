@@ -368,7 +368,9 @@ function createCard(restaus) {
       }).addTo(mapDesc);
 
       let markerDesc = L.marker([lat, lon]).addTo(mapDesc);
-      markerDesc.bindPopup(`<strong>${restau.name}</strong><br>${restau.location}`).openPopup();
+      markerDesc
+        .bindPopup(`<strong>${restau.name}</strong><br>${restau.location}`)
+        .openPopup();
 
       const closeModal = document.createElement("button");
       closeModal.textContent = "✖";
